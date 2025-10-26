@@ -10,7 +10,7 @@ import { Tasks } from './tasks/tasks';
   selector: 'app-root',
   imports: [RouterOutlet,Groups,AddTask,Tasks],
   template: `
-  <div class="container">
+  <div class="container p-4">
   <div class="row">
     <div class="col-4">
     <app-add-list></app-add-list>    

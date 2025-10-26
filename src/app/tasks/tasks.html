@@ -1,5 +1,5 @@
 <h2>List</h2>
-<button (click)="togglePopup()" class="btn btn-secondary" >Add Task</button>
+<button (click)="togglePopup()" class="btn btn-secondary addTaskButton" >Add Task</button>
 <div class="taskNamePopUp" [class.show]="showPopup">
   <label for="nameOfTask"> Add your Task:</label>
   <input type="text" name="nameOfTask" [(ngModel)]="taskName"(click)="$event.stopPropagation()" />
