@@ -1,0 +1,7 @@
+<div class="listNamePopUp" [class.show]="showPopup">
+  <label for="nameOfList">Please select a name for your List</label>
+  <input type="text" name="nameOfList" [(ngModel)]="listName"(click)="$event.stopPropagation()" />
+  <button (click)="addList()" class="btn btn-success">Add</button>
+</div>
+
+<button (click)="togglePopup()" class="btn btn-secondary">Add List</button>

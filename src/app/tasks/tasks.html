@@ -1,0 +1,16 @@
+<h2>List</h2>
+<button (click)="togglePopup()" class="btn btn-secondary" >Add Task</button>
+<div class="taskNamePopUp" [class.show]="showPopup">
+  <label for="nameOfTask"> Add your Task:</label>
+  <input type="text" name="nameOfTask" [(ngModel)]="taskName"(click)="$event.stopPropagation()" />
+  <button (click)="addTasks()" class="btn btn-success">Add</button>
+</div>
+<div class="task">
+<ul >
+    <li *ngFor="let task of tasks" class="check p-2"> <input type="checkbox" > {{ task }}</li>
+
+
+</ul>
+</div>
+
+
