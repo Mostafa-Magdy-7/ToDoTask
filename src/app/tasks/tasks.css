@@ -39,9 +39,7 @@ li{
 h2{
     color: white;
 }
-input[type="checkbox"] {
-  accent-color: #00C49A;
-}
+
 .task input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: #666; /* slightly dimmer to show it's completed */
@@ -52,4 +50,12 @@ input[type="checkbox"] {
     margin-left: 40px;
     padding: 10px;
     
+}
+.form-check-input {
+  accent-color: #6366f1; /* your accent color */
+  width: 18px;
+  height: 18px;
+}
+input{
+accent-color: #6366f1;
 }

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { Groups } from '../groups/groups';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../task';
+import { CommonModule } from '@angular/common'; 
 
 
 
 
 @Component({
   selector: 'app-add-list',
-  imports: [Groups,FormsModule],
+  imports: [Groups,FormsModule,CommonModule],
   standalone:true,
   templateUrl: './add-list.html',
   styleUrl: './add-list.css',

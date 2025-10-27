@@ -1,4 +1,4 @@
-import { Component, } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { TaskService } from '../task';
 import { FormsModule } from '@angular/forms';
@@ -13,18 +13,30 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })
-export class Tasks {
+export class Tasks implements OnInit {
   showPopup=false;
   taskName='';
   showError=false;
+  tasks: any[] = [];
+  count=Math.floor(Math.random() * 201);
+  
 constructor(public taskService: TaskService) {}
 togglePopup() {
     this.showPopup = !this.showPopup;
     this.showError=false;
+    
 
   }
-  get tasks() {
-    return this.taskService.tasks;
+   ngOnInit() {
+    if(this.taskService.getUserTasks())
+    {
+
+    }
+    this.taskService.getApiTasks().subscribe((data: any) => {
+      console.log(this.count);
+      this.tasks = data.slice(this.count, this.count+10); // just show first 10
+    });
+  
   }
    addTasks() {
     if (!this.taskName.trim()) {

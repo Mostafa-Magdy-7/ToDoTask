@@ -1,6 +1,10 @@
-<div class="listNamePopUp" [class.show]="showPopup">
+<div class="listNamePopUp form-group" [class.show]="showPopup">
   <label for="nameOfList">Please select a name for your List</label>
-  <input type="text" name="nameOfList" [(ngModel)]="listName"(click)="$event.stopPropagation()" />
+  <input type="text" minlength="3"  required name="nameOfList" #nameOfList="ngModel" [(ngModel)]="listName"(click)="$event.stopPropagation()" class="form-control"/>
+ <div *ngIf="nameOfList.invalid && nameOfList.touched" class="alert alert-danger">
+  Please select a name for your list
+</div>
+
   <button (click)="addList()" class="btn btn-success">Add</button>
 </div>
 
