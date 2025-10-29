@@ -1,5 +1,5 @@
-li{
-    color: white;
+li {
+  color: white;
 }
 .taskNamePopUp {
   position: fixed;
@@ -29,33 +29,31 @@ li{
 .taskNamePopUp.show {
   display: block;
 }
-.check{
-    font-size: larger;
-    background-color:#2c2c2c;
-    border-radius: 10px;
-    display: flex;
-    
+.check {
+  font-size: larger;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  display: flex;
 }
-h2{
-    color: white;
+h2 {
+  color: white;
 }
 
-.task input[type="checkbox"]:checked + label {
+.task input[type='checkbox']:checked + label {
   text-decoration: line-through;
   color: #666; /* slightly dimmer to show it's completed */
   transition: all 0.2s ease;
 }
-.addTaskButton{
-    display: flex;
-    margin-left: 40px;
-    padding: 10px;
-    
+.addTaskButton {
+  display: flex;
+  margin-left: 40px;
+  padding: 10px;
 }
 .form-check-input {
   accent-color: #6366f1; /* your accent color */
   width: 18px;
   height: 18px;
 }
-input{
-accent-color: #6366f1;
+input {
+  accent-color: #6366f1;
 }

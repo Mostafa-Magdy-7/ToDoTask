@@ -2,25 +2,21 @@ import { Component } from '@angular/core';
 import { Groups } from '../groups/groups';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../task';
-import { CommonModule } from '@angular/common'; 
-
-
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-list',
-  imports: [Groups,FormsModule,CommonModule],
-  standalone:true,
+  imports: [Groups, FormsModule, CommonModule],
+  standalone: true,
   templateUrl: './add-list.html',
   styleUrl: './add-list.css',
 })
 export class AddTask {
-  
-constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService) {}
 
   showPopup = false;
   listName = '';
-   showError = false;
+  showError = false;
 
   togglePopup() {
     this.showPopup = !this.showPopup;
@@ -28,13 +24,12 @@ constructor(private taskService: TaskService) {}
   }
 
   addList() {
-     if (!this.listName.trim()) {
-      this.showError = true;}
-      else{
-         this.taskService.addList(this.listName);
-   this.listName='';
-    this.showPopup = false;
-      }
-  
+    if (!this.listName.trim()) {
+      this.showError = true;
+    } else {
+      this.taskService.addList(this.listName);
+      this.listName = '';
+      this.showPopup = false;
+    }
   }
 }

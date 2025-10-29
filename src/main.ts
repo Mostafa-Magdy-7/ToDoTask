@@ -5,5 +5,4 @@ import { provideHttpClient } from '@angular/common/http';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(App, appConfig).catch((err) => console.error(err));
