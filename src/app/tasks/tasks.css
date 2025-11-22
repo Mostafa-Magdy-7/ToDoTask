@@ -81,3 +81,15 @@ input {
   display: flex;
   justify-content: space-between;
 }
+.taskText{
+  align-content: center;
+}
+@media (max-width: 800px) {
+  
+  .taskText{
+    font-size: small;
+    align-content: center;
+}
+
+
+}

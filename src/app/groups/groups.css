@@ -28,7 +28,15 @@ li {
 @media (max-width: 800px) {
   /* Example: make text smaller */
   .textList{
-    font-size: medium;
+    font-size: small;
+}
+.listsbutton {
+  width: 100%;
+  
+}
+.listsbutton button {
+  width: 100px;
+  
 }
 }
 
