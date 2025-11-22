@@ -3,12 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { Groups } from './groups/groups';
 import { AddTask } from './add-list/add-list';
 import { Tasks } from './tasks/tasks';
+import { Nav } from './nav/nav';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Groups, AddTask, Tasks],
+  imports: [RouterOutlet, Groups, AddTask, Tasks,Nav],
   template: `
     <div class="container p-4">
+    <app-nav></app-nav>
       <div class="row">
         <div class="col-4">
           <app-add-list></app-add-list>

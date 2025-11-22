@@ -1,0 +1,10 @@
+.nav{
+    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+}
+button{
+    color:white
+}

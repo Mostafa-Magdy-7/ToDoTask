@@ -1,20 +1,25 @@
-<div class="listNamePopUp form-group" [class.show]="showPopup">
+<button (click)="togglePopup()" class="btn btn-secondary addlist">Add List</button>
+
+<div class="listNamePopUp form-group" [class.show]="showPopup" [formGroup]="form">
+  <button (click)="closePopUp()" class="btn btn-danger m-2 Close">×</button>
+
   <label for="nameOfList">Please select a name for your List</label>
   <input
     type="text"
     minlength="3"
     required
-    name="nameOfList"
-    #nameOfList="ngModel"
     [(ngModel)]="listName"
     (click)="$event.stopPropagation()"
     class="form-control"
+    formControlName="name"
   />
-  <div *ngIf="nameOfList.invalid && nameOfList.touched" class="alert alert-danger">
+  <div *ngIf="name?.invalid && name?.touched" class="alert alert-danger">
     Please select a name for your list
   </div>
+  <div *ngIf="name?.touched && name?.invalid" class="alert alert-danger">
+  <div *ngIf="name?.errors?.['minlength']" >The List must be 3 letters or more</div>
 
-  <button (click)="addList()" class="btn btn-success">Add</button>
+  </div>
+  <button (click)="addList()" class="btn btn-success" [disabled]="form.invalid">Add</button>
 </div>
 
-<button (click)="togglePopup()" class="btn btn-secondary addlist">Add List</button>

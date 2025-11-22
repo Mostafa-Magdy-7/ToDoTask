@@ -57,3 +57,27 @@ h2 {
 input {
   accent-color: #6366f1;
 }
+.close {
+  position: absolute;
+  top:10px;
+  left: 10px;
+
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+.close:hover {
+  color: red;
+}
+.popup {
+  position: relative;}
+  .done-task {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.horiz{
+  display: flex;
+  justify-content: space-between;
+}
