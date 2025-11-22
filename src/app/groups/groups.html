@@ -1,7 +1,7 @@
-<div class="lists form-group ">
+<div class="lists form-group container">
   <ul>
     <li *ngFor="let list of lists" class="p-2 listsbutton ">
-      <button (click)="clicked(list)" [class.activeList]="selectedList">{{ list }}</button>
+      <button (click)="clicked(list)" [class.activeList]="selectedList" class="textList">{{ list }}</button>
     </li>
   </ul>
 </div>
