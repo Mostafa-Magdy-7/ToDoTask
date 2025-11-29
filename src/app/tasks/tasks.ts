@@ -18,13 +18,10 @@ export class Tasks implements OnInit {
   taskName = '';
   showError = false;
   isListSelected=false;
-  userTask=false;
   tasks: Task[] = [];
   filteredTasks: Task[] = [];
-  count = Math.floor(Math.random() * 201);
   listSelected = '';
   listShowed='';
-  isDone = new FormControl(false);
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
   });
@@ -39,21 +36,21 @@ export class Tasks implements OnInit {
   }
   
   ngOnInit() {
-     this.taskService.showList('All Tasks');
-    
-    this.taskService.selectedList$.subscribe(list => {
+
+  this.taskService.selectedList$.subscribe(list => {
     this.listShowed = list;
     this.filterTasks();
   });
-    if (this.taskService.filteredTasks && this.taskService.filteredTasks.length > 0) {
-      this.filteredTasks = this.taskService.filteredTasks;
-    } else {
-      this.taskService.getApiTasks().subscribe((data: any) => {
-        console.log(this.count);
-        this.filteredTasks = data.slice(this.count, this.count + 10);
-      });
-    }
-  }
+  
+  this.taskService.getApiTasks().subscribe((data: Task[]) => {
+    console.log('API Response:', data); 
+    
+    this.tasks = data; 
+    this.taskService.tasks = data; 
+    
+    this.taskService.showList('All Tasks');
+  });
+}
   selectList(listTask: string) {
     console.log(listTask);
     this.listSelected = listTask;
