@@ -39,6 +39,8 @@ export class Tasks implements OnInit {
   }
   
   ngOnInit() {
+     this.taskService.showList('All Tasks');
+    
     this.taskService.selectedList$.subscribe(list => {
     this.listShowed = list;
     this.filterTasks();
