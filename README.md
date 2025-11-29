@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 ---
+## [1.0.4] - 2025-11-27
+
+## Fixed
+
+- as the Website starts All Tasks List will be Selcted.
+
+- due for an Api of Placeholder isn't working it was changed.
+
 
 ## [1.0.3] – 2025-11-22
 
