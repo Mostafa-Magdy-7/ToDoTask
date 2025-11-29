@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 
 ## Fixed
 
-- as the Website starts All Tasks List will be Selcted.
+- as the Website starts All Tasks List will be Selected.
 
 - due for an Api of Placeholder isn't working it was changed.
 
