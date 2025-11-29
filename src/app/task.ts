@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-  private apiUrl = 'https://dummyjson.com/todos';
+  private apiUrl = 'https://my-json-server.typicode.com/Mostafa-Magdy-7/ToDoTask/tasks';
   constructor(private http: HttpClient) {}
   lists: string[] = ['All Tasks', 'Work', 'Personal'];
   id = 201;
